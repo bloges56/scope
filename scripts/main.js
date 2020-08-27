@@ -52,3 +52,23 @@ for (let k = 0; k < locations.length; k++) {
     need to fix this somehow.
 */
 console.log(`There were ${invalids} invalid locations`);
+
+
+
+//Lambda Llama
+const llamaNamer = function () {
+    const possibleNames = ["Larry", "Leon", "Leona", "Les", "Laura", "Lemony", "Lars", "Lekisha"];
+    const randomizer = Math.floor(Math.random() * 8);
+
+    const namer = function () {
+        const suffix = " the Llama";
+        const name = possibleNames[randomizer];
+        
+        return name + suffix;
+    }
+    return namer;
+}
+
+const nameMaker = llamaNamer();
+console.log(nameMaker());
+
